@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:pr6_voroshilov_trpo"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="600">
-    <StackPanel Orientation="Vertical">
+    <DockPanel>
         <DockPanel LastChildFill="False" Background="#5a819b"
                VerticalAlignment="Top"
-               HorizontalAlignment="Stretch">
+               HorizontalAlignment="Stretch"
+                   DockPanel.Dock="Top">
             <Button Name="main"
                     Width="100"
                     Height="25"
@@ -35,7 +36,8 @@
                 Помощь
             </Button>
         </DockPanel>
-        <Grid Margin="15">
+        <Grid Margin="15"
+              DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="180"/>
                 <ColumnDefinition Width="100"/>
@@ -126,13 +128,14 @@
                         Orientation="Horizontal"
                         HorizontalAlignment="Stretch">
                 <Label Content="Подтверждение пароля:"/>
-                <TextBox Width="200"
+                <TextBox Width="225"
                          HorizontalAlignment="Stretch"/>
             </StackPanel>
         </Grid>
-        <WrapPanel Background="#ffe9f4"
+        <WrapPanel Background="#DCDCDC	"
                    Margin="20, 0, 20, 0"
-                   Height="150">
+                   Height="150"
+                   DockPanel.Dock="Top">
             <Label Content="* Пароль должен содержать минимум 8 символов."
                    Margin="0,5,0,0"/>
             <Label Content="* Email должен быть в формате name@mail.com."
@@ -140,14 +143,25 @@
             <Label Content="* Все поля обязательны."
                    Margin="10,5,0,0"/>
         </WrapPanel>
+        <DockPanel DockPanel.Dock="Bottom"
+                   Background="DarkGray"
+                   Height="30">
+            <Label Content="Готово"
+                   DockPanel.Dock="Left"/>
+        </DockPanel>
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Right"
-                    Margin="0, 20, 20,0">
+                    VerticalAlignment="Bottom"
+                    Margin="0, 0, 20,20"
+                    DockPanel.Dock="Bottom">
             <Button Content="Зарегистрироваться"
-                    Width="150"/>
+                    Width="150"
+                    Height="20"
+                    />
             <Button Content="Отмена"
                     Margin="10,0,0,0"
-                    Width="100"/>
+                    Width="100"
+                    Height="20"/>
         </StackPanel>
-    </StackPanel>
+    </DockPanel>
 </Window>
